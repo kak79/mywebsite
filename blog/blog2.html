@@ -1,45 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Kimberly Kohel-Hayes - Software Engineer, Blog, Computer Programming</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/></head>
-  <link rel="stylesheet" href="blog2.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kimberly Kohel-Hayes's HomePage.">
+    <title>Kimberly Kohel-Hayes - Software Engineer, Blog, Computer Programming</title>
+    <link rel="stylesheet" href="/css/pure/pure-min.css">
+    <link rel="stylesheet" href=blog2.css>
+</head>
   <body>
-    <nav> 
-      <p  class="name">Kim Kohel-Hayes</p></br>
-      <a href="../home.html">Home</a></br></br>
-      <a href="../resume.html">Resume</a></br></br>
-      <a href="../portfolio.html">Portfolio</a></br></br>
-      <a href="../about.html">About</a></br></br>
-      <a href="../blog.html">Blog</a></br></br>
-    </nav>
-    <header>
-      <div class="right">
-      
-        <p>Want to have a little programming fun? Let's create a RegEx! What is a RegEx? Well funny you should ask that! A RegEx or Regular Expression is a search string of condensed datum. Let's say you wanted to search for all capital letters in a given set of text. How would you go about it? A RegEx.  This post will explore creating a RegEx for few different situations.</p>
-        <p>Before we start, three resources that will help anyone trying to build a RegEx are the following websites:<br> 
+    <div id="layout">
+      <a href="#menu" id="menuLink" class="menu-link"><span></span></a>
+      <div id="menu">
+        <div class="pure-menu"></br><a class="pure-menu-heading" href="#"><strong>Kim Kohel-Hayes</strong></a></br>
+          <ul class="pure-menu-list"></br>
+            <li class="pure-menu-item"><a href="../home.html" class="pure-menu-link">Home</a></li></br>
+            <li class="pure-menu-item"><a href="../resume.html" class="pure-menu-link">Resume</a></li></br>
+            <li class="pure-menu-item"><a href="../portfolio.html" class="pure-menu-link">Portfolio</a></li></br>
+            <li class="pure-menu-item"><a href="../about.html" class="pure-menu-link">About</a></li></br>
+            <li class="pure-menu-item"><a href="../blog.html" class="pure-menu-link">Blog</a></li></br>
+            <li class="pure-menu-item"><a href="../contact.html" class="pure-menu-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="main">
+        <div class="header">
+            <h1>Blog</h1>
+            <h2>
+                <span>
+                  <a href="home.html">Home</a>&nbsp;&middot;                    
+                  <a href="resume.html">Resume</a>&nbsp;&middot;
+                  <a href="portfolio.html">Portfolio</a>&nbsp;&middot;
+                  <a href="about.html">About</a>&nbsp;&middot;
+                  <a href="contact.html">Contact</a>
+                </span>
+              </h2>
+        </div>   
+        <div class="content pure-u-1 pure-u-md-3-4">
+          <div>
+             
+        
+<!-- A single blog post -->
+<section class="post">
+  <header class="post-header">
+    <h2 class="post-title">Creating a Custom RegEx</h2>
+  </header>
+  <div class="post-body">
+    <p>Want to have a little programming fun? Let's create a RegEx! What is a RegEx? Well funny you should ask that! A RegEx or Regular Expression is a search string of condensed datum. Let's say you wanted to search for all capital letters in a given set of text. How would you go about it? A RegEx.  This post will explore creating a RegEx for few different situations.</p>
+    <p>Before we start, three resources that will help anyone trying to build a RegEx are the following websites:<br> 
           <a href="https://regexr.com/">Regexr</a></br>
           <a href="https://rubular.com/">Rubular</a></br>
           <a href="https://ruby-doc.org/core-2.6/Regexp.html#method-i-match">Ruby Docs Regexp</a></br></br>
           <img src="111.jpg"alt="starts_with_a_vowel"height="110"width="550">
-        </p>
-        <p>Lets walk through method <code>starts_with_a_vowel</code> and the steps I used to successfully find a working RegEx. We'll start by picking out a list of words.  Find some that are capitalized and some that are not. Pick at least one, or more that starts with each vowel, capitalize some and leave some lower-case.  Pick out a few words that start with consonants.  Throw in some punctuation.  Maybe some numbers.  Now we have our list.  Go to either <a href="https://regexr.com/">Regexr</a> or <a href="https://rubular.com/">Rubular</a> and enter your list in the text area. Make sure that you delete any sample text that was there already.  In the RegEx area (which you might have to delete as well) you start entering possibilities.  Play with it. Both sites give you plenty to go on.  See if you can solve it differently than I did.</p>
-        <p>Now let's do something a little more complicated! Let's see if we can match all valid phone numbers but kick out all invalid phone numbers! You are really going to have to use your imagination and maybe do some research on this one! Here's what I came up with.</br></br>
+    </p>
+    <p>Lets walk through method <code>starts_with_a_vowel</code> and the steps I used to successfully find a working RegEx. We'll start by picking out a list of words.  Find some that are capitalized and some that are not. Pick at least one, or more that starts with each vowel, capitalize some and leave some lower-case.  Pick out a few words that start with consonants.  Throw in some punctuation.  Maybe some numbers.  Now we have our list.  Go to either <a href="https://regexr.com/">Regexr</a> or <a href="https://rubular.com/">Rubular</a> and enter your list in the text area. Make sure that you delete any sample text that was there already.  In the RegEx area (which you might have to delete as well) you start entering possibilities.  Play with it. Both sites give you plenty to go on.  See if you can solve it differently than I did.</p>
+    <p>Now let's do something a little more complicated! Let's see if we can match all valid phone numbers but kick out all invalid phone numbers! You are really going to have to use your imagination and maybe do some research on this one! Here's what I came up with.</br></br>
           <img src="112.jpg"alt="starts_with_a_vowel"height="110"width="950"></p>
-        <p>I hope you have some fun with this programming problem.</p>
-        </div>
-        </header>
-  
-    <footer >
-      <a href="https://twitter.com/kim_ka96"><img src="twitter.jpg"alt="Kimberly Kohel-Hayes's Twitter Profile" height="30" width="30"></a>
-      <a href="https://dev.to/kak79"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Kimberly Kohel-Hayes's DEV Profile" height="30" width="30">
-      </a>
-      <a href='https://www.linkedin.com/in/kimberly-kohel-hayes-7b7413191/'><img src="linkedin.jpg"alt="Kimberly Kohel-Hayes's LinkedIn Profile" height="30" width="30"></a>
-      <a href='https://stackoverflow.com/users/13615178/kim'><img src="stack.jpg"alt="Kimberly Kohel-Hayes's Stack Overflow Profile" height="30" width="30"></a>
-      <a href='https://github.com/kak79?tab=repositories'><img src="git.png"alt="Kimberly Kohel-Hayes's Git Hub Repositories" height="30" width="30"></a>
-      
-      <p class="licence">Licence <a href='https://opensource.org/licenses/MIT'>MIT</a> Kimberly A Kohel-Hayes</p>
-    </footer>
-  </body>
+    <p>I hope you have some fun with this programming problem.</p>
+  </div>
+</section>
+<div class="footer">
+  <a href="https://twitter.com/kim_ka96"><img src="twitter.jpg"alt="Kimberly Kohel-Hayes's Twitter Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://dev.to/kak79"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Kimberly Kohel-Hayes's DEV Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+  <a href='https://www.linkedin.com/in/kimberly-kohel-hayes-7b7413191/'><img src="linkedin.jpg"alt="Kimberly Kohel-Hayes's LinkedIn Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+  <a href='https://stackoverflow.com/users/13615178/kim'><img src="stack.jpg"alt="Kimberly Kohel-Hayes's Stack Overflow Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+  <a href='https://github.com/kak79?tab=repositories'><img src="git.png"alt="Kimberly Kohel-Hayes's Git Hub Repositories" height="30" width="30"></a>
+  <p class="licence">&copy; Kimberly A Kohel-Hayes</p>
+</div>  
+      </div>
+  <script src="/js/ui.js"></script>
+    </body>
+  </html>
