@@ -6,7 +6,7 @@
     <meta name="description" content="Kimberly Kohel-Hayes's HomePage.">
     <title>Kimberly Kohel-Hayes - Software Engineer, Blog, Computer Programming</title>
     <link rel="stylesheet" href="/css/pure/pure-min.css">
-    <link rel="stylesheet" href=blog.css>
+    <link rel="stylesheet" href=blog3.css>
 </head>
   <body>
     <div id="layout">
@@ -40,109 +40,111 @@
         </div>      
 <div class="content pure-u-1 pure-u-md-3-4">
   <div>
-      <!-- A wrapper for all the blog posts -->
-      <div class="posts">
-          <h1 class="content-subhead">Pinned Post</h1>
-
           <!-- A single blog post -->
           <section class="post">
               <header class="post-header">
-                  
-
+                <div class="post-description">
+                    <div class="post-images pure-g">
+                        <div class="pure-u-1 pure-u-md-1-2">
+                                <img alt="The Final Hash Variable"
+                                     class="pure-img-responsive"
+                                     src="API8.jpg">
+                            <div class="post-image-meta">
+                                <h3>The Final Hash Variable</h3>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
                   <h2 class="post-title">Selecting Hashes from an API</h2>
-
-                  <p class="post-meta">
-                    
-                  </p>
               </header>
-
-              <div class="post-description">
+              <div class="post-content">
                   <p>
-                    Selecting hashes from an API can seem like a very complicated process, so let's take it one step at a time. We will be storing everything in variables for ease of access. The definition to a variable can be found...
+                    Selecting hashes from an API can seem like a very complicated process, so let's take it one step at a time. We will be storing everything in variables for ease of access. The definition to a variable can be found <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">here</a>.
                   </p>
-              </div>
-          </section>
-      </div>
-
-      <div class="posts">
-          <h1 class="content-subhead">Recent Posts</h1>
-
-          <section class="post">
-              <header class="post-header">
-                  <img width="48" height="48" alt="Lorem ipsum&#x27;s avatar" class="post-avatar" src="kim1.jpg">
-
-                  <h2 class="post-title">Lorem ipsum dolor sit amet</h2>
-
-                  <p class="post-meta">
-                      By <a class="post-author" href="#">Lorem ipsum</a> under <a class="post-category post-category-js" href="#">Lorem ipsum</a>
-                  </p>
-              </header>
-
-              <div class="post-description">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-              </div>
-          </section>
-
-          <section class="post">
-              <header class="post-header">
-                  <img width="48" height="48" alt="Lorem ipsum&#x27;s avatar" class="post-avatar" src="kim1.jpg">
-
-                  <h2 class="post-title">Lorem ipsum dolor sit amet</h2>
-
-                  <p class="post-meta">
-                      By <a class="post-author" href="#">Lorem ipsum</a> under <a class="post-category" href="#">Lorem ipsum</a>
-                  </p>
-              </header>
-
-              <div class="post-description">
+                  <p>The first thing we are going to do is set our API equal to a variable named response. Then we are going to put in a pry (see more about pry <a href="https://github.com/pry/pry">here</a>) and look at our available hash.</p>
+                    <div class="post-images pure-g">
+                        <div class="pure-u-1 pure-u-md-1-2">
+                                <img alt="1st pry of variable response"
+                                     class="pure-img-responsive"
+                                     src="API2.jpg">
+                            <div class="post-image-meta">
+                                <h3>1st pry of variable response
+                                </h3>
+                            </div>
+                        </div>  
+                    </div>
+                </div>                 
+                  <p>We want to select a key from response that has multiple keys as it's value. If we look closely, 'page'=>1,'per_page'=>1 so they each have individual returns and 'photos'=>[{ which means not only does it have an array, it has an array of hashes.</p>
+                  <p>We are going to save 'photos' into the variable photos_array like this and run the pry again to select our next key.</p>
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                            <img alt="variable photos_array"
+                                 class="pure-img-responsive"
+                                 src="API3.jpg">
+                        <div class="post-image-meta">
+                            <h3>variable photos_array</h3>
+                        </div>
+                    </div>  
+                </div>
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                        <img alt="pry of photos_array"
+                             class="pure-img-responsive"
+                             src="API4.jpg">
+                    <div class="post-image-meta">
+                        <h3>pry of photos_array</h3>
+                    </div>
+                </div>  
+            </div>        
+                  <p>We are going to pick three. 'photographer', 'photographer_url', and 'src'=>'original'
+                    So using our binding.pry we gradually develop these three lines of code:</p>
+                    <div class="post-images pure-g">
+                        <div class="pure-u-1 pure-u-md-1-2">
+                                <img alt="code in need of refactoring"
+                                     class="pure-img-responsive"
+                                     src="API5.jpg">
+                            <div class="post-image-meta">
+                                <h3>code in need of refactoring</h3>
+                            </div>
+                        </div>  
+                    </div>
+                  <p>This code will work. But it isn't very DRY code. Don't Repeat Yourself! We are going to refactor this code next.</p>
+                  <p> Because we want to iterate over three things we are going to use the .each method, naming our variable photographer_hash and setting up the block something like this:</p>
                   <div class="post-images pure-g">
-                      <div class="pure-u-1 pure-u-md-1-2">
-                          <a href="http://www.flickr.com/photos/uberlife/8915936174/">
-                              <img alt="Photo of someone working poolside at a resort"
-                                   class="pure-img-responsive"
-                                   src="http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg">
-                          </a>
-
-                          <div class="post-image-meta">
-                              <h3>Lorem ipsum dolor sit amet</h3>
-                          </div>
-                      </div>
-
-                      <div class="pure-u-1 pure-u-md-1-2">
-                          <a href="http://www.flickr.com/photos/uberlife/8907351301/">
-                              <img alt="Photo of the sunset on the beach"
-                                   class="pure-img-responsive"
-                                   src="http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg">
-                          </a>
-
-                          <div class="post-image-meta">
-                              <h3>Lorem ipsum dolor sit amet</h3>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-          <section class="post">
-              <header class="post-header">
-                  <img width="48" height="48" alt="Lorem ipsum&#x27;s avatar" class="post-avatar" src="kim1.jpg">
-
-                  <h2 class="post-title">Lorem ipsum dolor sit amet</h2>
-
-                  <p class="post-meta">
-                      By <a class="post-author" href="#">Lorem ipsum</a> under <a class="post-category post-category-yui" href="#">Lorem ipsum</a>
-                  </p>
-              </header>
-
-              <div class="post-description">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-              </div>
-          </section>
-      </div>
+                    <div class="pure-u-1 pure-u-md-1-2">
+                            <img alt="first version of the .each method"
+                                 class="pure-img-responsive"
+                                 src="API6.jpg">
+                        <div class="post-image-meta">
+                            <h3>first version of the .each method</h3>
+                        </div>
+                    </div>  
+                </div>
+                  <p>Now we have a new Photographer object that iterates through my API and returns all of the values. But it could still be better. Instead of Photographer.new...., we are going to set up a new variable called info_hash. Set it equal to:</p>
+                  <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                            <img alt="info_hash"
+                                 class="pure-img-responsive"
+                                 src="API7.jpg"> 
+                        <div class="post-image-meta">
+                            <h3>info_hash</h3>
+                        </div>
+                    </div>  
+                </div>
+                  <p>The reasons behind the locally defined keys pic_taker, pic_taker_url, and orig_url have more to do with OOP and classes than APIs and refactoring so will not be gone into here. Just understand that they were defined in another class. The last thing to do here is to put Photographer.new back in with its new argument of info_hash with the resulting API looking like this: </p>
+                  <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                            <img alt="final hash"
+                                 class="pure-img-responsive"
+                                 src="API8.jpg"> 
+                        <div class="post-image-meta">
+                            <h3>Final Hash</h3>
+                        </div>
+                    </div>  
+                </div> 
+                  <p>All of the code examples in this article and their associated files can be found <a href="https://github.com/kak79/CLI-PROJECT">here</a>. </p> 
+            </section>
+          
       <div class="footer">
         <a href="https://twitter.com/kim_ka96"><img src="twitter.jpg"alt="Kimberly Kohel-Hayes's Twitter Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
         <a href="https://dev.to/kak79"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Kimberly Kohel-Hayes's DEV Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
