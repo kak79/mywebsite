@@ -1,5 +1,6 @@
 body {
-  color: #777;
+  color: rgb(88, 88, 88);
+  font-family: sans-serif;
 }
 
 .pure-img-responsive {

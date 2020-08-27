@@ -1,5 +1,6 @@
 body {
-  color: #777;
+  color: rgb(88, 88, 88);
+  font-family: sans-serif;
 }
 
 .pure-img-responsive {
@@ -75,6 +76,7 @@ The content `<div>` is where all your content goes.
 
 .post {
   padding-bottom: 2em;
+
 }
 
 .post-avatar {
@@ -91,9 +93,10 @@ The content `<div>` is where all your content goes.
 
 
 .post-description {
-  font-family: Georgia, "Cambria", serif;
+  font-size: large;
   color: #444;
   line-height: 1.8em;
+  
 }
 .post-meta {
   color: #999;

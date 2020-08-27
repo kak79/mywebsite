@@ -1,5 +1,6 @@
 body {
-  color: #777;
+  color: rgb(88, 88, 88);
+  font-family: sans-serif;
 }
 
 .pure-img-responsive {
@@ -75,6 +76,8 @@ The content `<div>` is where all your content goes.
 
 .post {
   padding-bottom: 2em;
+  font-size: large;
+  padding-right: 7in;
 }
 
 .post-avatar {

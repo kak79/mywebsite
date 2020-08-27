@@ -1,5 +1,7 @@
 body {
-  color: #777;
+  color: rgb(88, 88, 88);
+  font-family: sans-serif;
+  
 }
 
 .pure-img-responsive {
@@ -65,16 +67,18 @@ The content `<div>` is where all your content goes.
  
 .content-subhead {
   text-transform: uppercase;
-  color: #aaa;
+  color: rgb(88, 88, 88);
   border-bottom: 1px solid #eee;
   padding: 0.4em 0;
-  font-size: 80%;
+  font-size: 85%;
   font-weight: 500;
   letter-spacing: 0.1em;
 }
 
 .post {
+  padding-right: 7in;
   padding-bottom: 2em;
+  font-size: large;
 }
 
 .post-avatar {
