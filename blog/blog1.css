@@ -26,6 +26,12 @@ This is the parent `<div>` that contains the menu and the content area.
 */
 
 
+.pure-u-1-3-b {
+  position: relative;
+  text-align: right;
+  top: right;
+}
+  
 
 
 #layout {
@@ -114,8 +120,6 @@ The content `<div>` is where all your content goes.
   text-shadow: 0 1px 1px #333;
 }
 
-
-  
 
   .footer {
       text-align: center;
