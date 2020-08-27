@@ -1,157 +1,182 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kimberly Kohel-Hayes's HomePage.">
     <title>Kimberly Kohel-Hayes - Software Engineer, Blog, Computer Programming</title>
     <link rel="stylesheet" href="/css/pure/pure-min.css">
-    <link rel="stylesheet" href=blog.css>
+    <link rel="stylesheet" href=blog4.css>
 </head>
-  <body>
+
+<body>
     <div id="layout">
-      <a href="#menu" id="menuLink" class="menu-link"><span></span></a>
-      <div id="menu">
-        <div class="pure-menu"></br><a class="pure-menu-heading" href="#"><strong>Kim Kohel-Hayes</strong></a></br>
-          <ul class="pure-menu-list"></br>
-            <li class="pure-menu-item"><a href="../home.html" class="pure-menu-link">Home</a></li></br>
-            <li class="pure-menu-item"><a href="../resume.html" class="pure-menu-link">Resume</a></li></br>
-            <li class="pure-menu-item"><a href="../portfolio.html" class="pure-menu-link">Portfolio</a></li></br>
-            <li class="pure-menu-item"><a href="../about.html" class="pure-menu-link">About</a></li></br>
-            <li class="pure-menu-item"><a href="../blog.html" class="pure-menu-link">Blog</a></li></br>
-            <li class="pure-menu-item"><a href="../contact.html" class="pure-menu-link">Contact</a></li>
-          </ul>
+        <a href="#menu" id="menuLink" class="menu-link"><span></span></a>
+        <div id="menu">
+            <div class="pure-menu"></br></br>
+                <ul class="pure-menu-list"></br>
+                    <li class="pure-menu-item"><a href="../home.html" class="pure-menu-link">Home</a></li></br>
+                    <li class="pure-menu-item"><a href="../resume.html" class="pure-menu-link">Resume</a></li></br>
+                    <li class="pure-menu-item"><a href="../portfolio.html" class="pure-menu-link">Portfolio</a></li>
+                    </br>
+                    <li class="pure-menu-item"><a href="../about.html" class="pure-menu-link">About</a></li></br>
+                    <li class="pure-menu-item"><a href="../blog.html" class="pure-menu-link">Blog</a></li></br>
+                    <li class="pure-menu-item"><a href="../contact.html" class="pure-menu-link">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div id="main">
-        <div class="header">
-            <h1>Blog</h1>
-            <h2>
-                <span>
-                  <a href="../home.html">Home</a>&nbsp;&middot;                    
-                  <a href="../resume.html">Resume</a>&nbsp;&middot;
-                  <a href="../portfolio.html">Portfolio</a>&nbsp;&middot;
-                  <a href="../about.html">About</a>&nbsp;&middot;
-                  <a href="../blog.html">Blog</a>&nbsp;&middot;
-                  <a href="../contact.html">Contact</a>
-                </span>
-              </h2>
-        </div>      
-<div class="content pure-u-1 pure-u-md-3-4">
-  <div>
-      <!-- A wrapper for all the blog posts -->
-      <div class="posts">
-          <h1 class="content-subhead">Pinned Post</h1>
+        <div id="main">
+            <div class="header">
+                <h1>Blog</h1>
+                <h2>
+                    <span>
+                        <a href="../home.html">Home</a>&nbsp;&middot;
+                        <a href="../resume.html">Resume</a>&nbsp;&middot;
+                        <a href="../portfolio.html">Portfolio</a>&nbsp;&middot;
+                        <a href="../about.html">About</a>&nbsp;&middot;
+                        <a href="../blog.html">Blog</a>&nbsp;&middot;
+                        <a href="../contact.html">Contact</a>
+                    </span>
+                </h2>
+            </div>
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div>
+                    <!-- A single blog post -->
+                    <section class="post">
+                        <header class="post-header">
+                            <div class="post-description">
+                                <div class="post-images pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <img alt="The Final Refactor" class="pure-img-responsive" src="Nat.jpg">
+                                        <div class="post-image-meta">
+                                            <h3>The Final Refactor</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="post-title">What Class? Puts it in?</h2>
+                        </header>
+                        <div class="post-content">
+                        <p>I just wrote a CLI (Command Line Interface) <a href="https://github.com/kak79/CLI-PROJECT">app</a>. I do not say finished, because I'm still refactoring it. I have multiple classes in this <a href="https://github.com/kak79/CLI-PROJECT">app</a>. The viewpoints on class responsibility vary. Specifically the interface class responsibility versus the methods class. Some say that you could put <code>puts, inputs</code> and <code>gets</code> methods in whichever class you could justify them.</p>
 
-          <!-- A single blog post -->
-          <section class="post">
-              <header class="post-header">
-                  
+                            <div class="post-images pure-g">
+                                <div class="pure-u-1 pure-u-md-1-2">
+                                    <img alt="" class="pure-img-responsive" src="puts input gets.jpg">
 
-                  <h2 class="post-title">Selecting Hashes from an API</h2>
+                                </div>
+                            </div>
+                        
 
-                  <p class="post-meta">
+                        <p>Others say that they need to be in the <code>CLI class</code> so that if I ever change the project to a web project they will all need to be in the same class and not in the methods class for ease of access.</p>
+
+                        <p>In my case we are dealing with <code>class CLI</code> and <code>class Photographer</code>. Most of my <code>puts, inputs</code> and <code>gets</code> are in <code>class CLI</code>, but having listened closely to everyone, I have decided that I need to do some refactoring of these methods in <code>class Photographer</code> in order to move the puts to <code>class CLI</code>.</p>
+
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1 pure-u-md-1-2">
+                                <img alt="" class="pure-img-responsive" src="self_pic_taker.jpg">
+
+                            </div>
+                        </div>
+                
+
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <img alt="" class="pure-img-responsive" src="display_with_puts.jpg">
+
+                    </div>
+                </div>
+            
+
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                        <img alt=""
+                             class="pure-img-responsive"
+                             src="self_search_pic_taker.jpg">
                     
-                  </p>
-              </header>
+                </div>  
+            </div>
+        
 
-              <div class="post-description">
-                  <p>
-                    Selecting hashes from an API can seem like a very complicated process, so let's take it one step at a time. We will be storing everything in variables for ease of access. The definition to a variable can be found...
-                  </p>
-              </div>
-          </section>
-      </div>
+            <p>First I am going to copy the two methods with the puts statements whole and paste them into the <code>CLI class</code>. Then I have to change a few things to make them a part of <code>class CLI</code>.</p>
+ 
+            <p>The first thing I do after moving <code>pic_taker_array</code> to <code>CLI</code> is change it from a class method to an instance method by removing self. I also need to change the way I call it in the CLI class from <code>Photographer.pic_taker_array</code> to <code>pic_taker_array</code>. Then I put a <code>pry</code> on the first line of this method so that I can see exactly how I need to modify it.</p>
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img alt="" class="pure-img-responsive" src="pry_photographer.jpg">
 
-      <div class="posts">
-          <h1 class="content-subhead">Recent Posts</h1>
+                </div>
+            </div>
+          
+            <p>I have a method in my <code>Photographer class</code> called <code>self.all</code> that calls <code>@@all</code> so I'm going to try that in my <code>pry</code>. I run the program and see that my photographers are no longer displayed properly.</p>
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img alt="" class="pure-img-responsive" src="photographer display issues.jpg">
 
-          <section class="post">
-              <header class="post-header">
-                  <img width="48" height="48" alt="Lorem ipsum&#x27;s avatar" class="post-avatar" src="kim1.jpg">
+                </div>
+            </div>
+            <p>I need to edit the display method so that so that it will accept a photographer into the methods <code>pic_taker, pic_taker_url</code> and <code>orig_url</code>.</p>
 
-                  <h2 class="post-title">Lorem ipsum dolor sit amet</h2>
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                            <img alt=""
+                                 class="pure-img-responsive"
+                                 src="display_photographer.jpg">
+                        
+                    </div>  
+                </div>
+            
 
-                  <p class="post-meta">
-                      By <a class="post-author" href="#">Lorem ipsum</a> under <a class="post-category post-category-js" href="#">Lorem ipsum</a>
-                  </p>
-              </header>
+            <p>I try running my program again and realize that <code>display</code> is not getting called. This leads me to the line of the <code>glue</code> method where <code>search_pic_taker_array</code> is supposed to be called but is getting skipped, so I decide to take the contents of <code>search_pic_taker_array</code> and move them to <code>glue</code>.</p>
 
-              <div class="post-description">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-              </div>
-          </section>
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                            <img alt=""
+                                 class="pure-img-responsive"
+                                 src="self_search_input2.jpg">
+                        
+                    </div>  
+                </div>
+            
 
-          <section class="post">
-              <header class="post-header">
-                  <img width="48" height="48" alt="Lorem ipsum&#x27;s avatar" class="post-avatar" src="kim1.jpg">
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                        <img alt=""
+                             class="pure-img-responsive"
+                             src="glue.jpg">
+                    
+                </div>  
+            </div>
+        
 
-                  <h2 class="post-title">Lorem ipsum dolor sit amet</h2>
+            <p>I run my program and check everything. The photographers display perfectly now!</p>
 
-                  <p class="post-meta">
-                      By <a class="post-author" href="#">Lorem ipsum</a> under <a class="post-category" href="#">Lorem ipsum</a>
-                  </p>
-              </header>
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <img alt="final refactor" class="pure-img-responsive" src="Nat.jpg">
 
-              <div class="post-description">
-                  <div class="post-images pure-g">
-                      <div class="pure-u-1 pure-u-md-1-2">
-                          <a href="http://www.flickr.com/photos/uberlife/8915936174/">
-                              <img alt="Photo of someone working poolside at a resort"
-                                   class="pure-img-responsive"
-                                   src="http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg">
-                          </a>
-
-                          <div class="post-image-meta">
-                              <h3>Lorem ipsum dolor sit amet</h3>
-                          </div>
-                      </div>
-
-                      <div class="pure-u-1 pure-u-md-1-2">
-                          <a href="http://www.flickr.com/photos/uberlife/8907351301/">
-                              <img alt="Photo of the sunset on the beach"
-                                   class="pure-img-responsive"
-                                   src="http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg">
-                          </a>
-
-                          <div class="post-image-meta">
-                              <h3>Lorem ipsum dolor sit amet</h3>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-          <section class="post">
-              <header class="post-header">
-                  <img width="48" height="48" alt="Lorem ipsum&#x27;s avatar" class="post-avatar" src="kim1.jpg">
-
-                  <h2 class="post-title">Lorem ipsum dolor sit amet</h2>
-
-                  <p class="post-meta">
-                      By <a class="post-author" href="#">Lorem ipsum</a> under <a class="post-category post-category-yui" href="#">Lorem ipsum</a>
-                  </p>
-              </header>
-
-              <div class="post-description">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-              </div>
-          </section>
-      </div>
-      <div class="footer">
-        <a href="https://twitter.com/kim_ka96"><img src="twitter.jpg"alt="Kimberly Kohel-Hayes's Twitter Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
-        <a href="https://dev.to/kak79"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Kimberly Kohel-Hayes's DEV Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
-        <a href='https://www.linkedin.com/in/kimberly-kohel-hayes-7b7413191/'><img src="linkedin.jpg"alt="Kimberly Kohel-Hayes's LinkedIn Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
-        <a href='https://stackoverflow.com/users/13615178/kim'><img src="stack.jpg"alt="Kimberly Kohel-Hayes's Stack Overflow Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
-        <a href='https://github.com/kak79?tab=repositories'><img src="git.png"alt="Kimberly Kohel-Hayes's Git Hub Repositories" height="30" width="30"></a>
-        <p class="licence">&copy; Kimberly A Kohel-Hayes</p>
-      </div>  
+                </div>
+            </div>
+            <p>All of the code examples in this article and their associated files can be found <a href="https://github.com/kak79/CLI-PROJECT">here</a>. </p>
+            </section>
+        </div>
     </div>
-<script src="../js/ui.js"></script>
-  </body>
+    <div class="footer">
+        <a href="https://twitter.com/kim_ka96"><img src="twitter.jpg" alt="Kimberly Kohel-Hayes's Twitter Profile"
+                height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+        <a href="https://dev.to/kak79"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+                alt="Kimberly Kohel-Hayes's DEV Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+        <a href='https://www.linkedin.com/in/kimberly-kohel-hayes-7b7413191/'><img src="linkedin.jpg"
+                alt="Kimberly Kohel-Hayes's LinkedIn Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+        <a href='https://stackoverflow.com/users/13615178/kim'><img src="stack.jpg"
+                alt="Kimberly Kohel-Hayes's Stack Overflow Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+        <a href='https://github.com/kak79?tab=repositories'><img src="git.png"
+                alt="Kimberly Kohel-Hayes's Git Hub Repositories" height="30" width="30"></a>
+        <p class="licence">&copy; Kimberly A Kohel-Hayes</p>
+    </div>
+    </div>
+    <script src="../js/ui.js"></script>
+</body>
+
 </html>
