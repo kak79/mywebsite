@@ -20,6 +20,6 @@ The plan is to migrate this site to ruby on rails then host it on Heroku or AWS.
 License
 ---  
 
-My image and email are mine.
+My image, blogs, portfolio and email are mine.
 
 Everything Else [MIT](https://opensource.org/licenses/MIT)
