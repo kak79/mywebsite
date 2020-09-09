@@ -60,10 +60,11 @@ The content `<div>` is where all your content goes.
       font-size: 3em;
       font-weight: 300;
   }
-   .header h2 {
+   .header .pure-menu-horizontal {
       font-weight: 300;
+      font-size: x-large;
       color: #ccc;
-      padding: 0;
+      padding: 5px;
       margin-top: 0;
   }
 
