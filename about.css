@@ -63,9 +63,16 @@ The content `<div>` is where all your content goes.
   }
    .header h2 {
       font-weight: 300;
-      color: #ccc;
+      color: #333;
       padding: 0;
       margin-top: 0;
+  }
+  .header .pure-menu-horizontal {
+    font-weight: 300;
+    font-size: x-large;
+    color: #ccc;
+    padding: 5px;
+    margin-top: 0;
   }
 
 .footer {
