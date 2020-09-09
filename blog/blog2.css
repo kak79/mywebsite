@@ -59,38 +59,58 @@ This is the parent `<div>` that contains the menu and the content area.
 The content `<div>` is where all your content goes.
 */
 
+
 .header {
   margin: 0;
   color: #333;
   text-align: center;
   padding: 2.5em 2em 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
 }
- .header h1 {
-     margin: 0.2em 0;
-     font-size: 3em;
-     font-weight: 300;
- }
+  .header h1 {
+    margin: 0.2em 0;
+    font-size: 3em;
+    font-weight: 300;
+  }
   .header h2 {
-     font-weight: 300;
-     color: #ccc;
-     padding: 0;
-     margin-top: 0;
- }
- 
+    font-weight: 300;
+    color: #333;
+    padding: 0;
+    margin-top: 0;
+  }
+  .header .pure-menu-horizontal {
+    font-weight: 300;
+    font-size: x-large;
+    color: #333;
+    padding: 5px;
+    margin-top: 0;
+  }
+  
+ .content h1{
+  text-align: center;
+  font-size: 300%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 50px;
+  line-height: 1.6em;
+ } 
 .content-subhead {
   text-transform: uppercase;
-  color: #aaa;
-  border-bottom: 1px solid #eee;
+  color: #333;
+  border-bottom: 1px solid #333;
   padding: 0.4em 0;
   font-size: 80%;
   font-weight: 500;
   letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .post {
   padding-bottom: 2em;
-  font-size: large;
+  text-align: center;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .post-avatar {
@@ -98,7 +118,10 @@ The content `<div>` is where all your content goes.
   float: right;
   margin-left: 1em;
 }
-
+.post-body {
+  font-size: large;
+  color: #444;
+}
 .post-title {
   font-size: 2em;
   color: #222;
