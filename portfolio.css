@@ -52,6 +52,10 @@ The content `<div>` is where all your content goes.
   text-align: center;
   font-size: 250%;
 }
+.content .pure-menu-horizontal{
+  text-align: center;
+  font-size: 1.25em;
+}
 
 .header {
    margin: 0;
