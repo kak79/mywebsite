@@ -49,6 +49,10 @@ The content `<div>` is where all your content goes.
   font-size: large;
 }
 
+.content h2{
+  text-align: center;
+}
+
 .header {
    margin: 0;
    color: #333;
