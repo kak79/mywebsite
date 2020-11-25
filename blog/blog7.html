@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kearney, NE, Web Design, Web Development, Blog, Computer Programming.">
+    <title>Kearney, NE, Web Design, Web Development, Blog, Computer Programming.</title>
+    <link rel="stylesheet" href="https://purecss.io/">
+    <link rel="stylesheet" href=../css/blog6.css>
+</head>
+  <body>
+    <div id="layout"><a href="#menu" id="menuLink" class="menu-link"><span></span></a>
+      <div id="menu">
+        <div class="pure-menu"></br></br>
+          <ul class="pure-menu-list"></br>
+            <li class="pure-menu-item"><a href="../home.html" class="pure-menu-link">Home</a></li></br>
+            <li class="pure-menu-item"><a href="../blog.html" class="pure-menu-link">Blog</a></li></br>
+            <li class="pure-menu-item"><a href="../portfolio.html" class="pure-menu-link">Portfolio</a></li></br>   
+            <li class="pure-menu-item"><a href="../resume.html" class="pure-menu-link">Resume</a></li></br>
+            <li class="pure-menu-item"><a href="../about.html" class="pure-menu-link">About</a></li></br>
+            <li class="pure-menu-item"><a href="../contact.html" class="pure-menu-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="main">
+        <div class="header">
+          <h1>Kimberly A Kohel-Hayes</h1>
+          <h2>Web Design, Web Development and Computer Programming</h2>
+          <h3>Kearney, Nebraska</h3>
+            <div class="pure-menu-horizontal">
+            <span>
+              <a href="../home.html">Home</a>&nbsp;&middot;                    
+              <a href="../blog.html">Blog</a>&nbsp;&middot;
+              <a href="../portfolio.html">Portfolio</a>&nbsp;&middot;
+              <a href="../resume.html">Resume</a>&nbsp;&middot;
+              <a href="../about.html">About</a>&nbsp;&middot;
+              <a href="../contact.html">Contact</a>
+        </span>
+          </div>
+        </div>
+        <div class="content">
+          <h1 class="content-subhead">Blog Posts</h1> 
+          </div>          
+        <div class="content pure-u-1 pure-u-md-3-4">
+           <!-- A single blog post -->
+          <section class="post">
+            <header class="content-subhead">
+              <div class="post-description">
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <img alt="The Model class Car" class="pure-img-responsive" src="../images/model Car.png">
+                        <div class="post-image-meta">
+                          <h3>The Model class Car</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <h2 class="post-title">Making a Class Level ActiveRecord Chainable Scope Method</h2>
+            <p class="post-meta"></p>
+            </header>
+            <div class="post-content">
+              <p>
+              This is how to make a class level ActiveRecord chainable scope method from what is a scope to imlementation.
+              </p>
+                
+              <p>
+                First, I had to find a good definition of scope method.  I found one <a href="https://medium.com/@pojotorshemi/ruby-on-rails-named-scope-and-default-scope-74ee3db2a15f#:~:text=In%20Ruby%20on%20Rails%2C%20named,to%20query%20Active%20Record%20database.&text=Like%20Ruby%20class%20methods%2C%20to,it%20on%20the%20class%20object.">here</a>.  Ok.  This definition brought up another thing that I don’t understand, lambdas, so let’s find a good article about those. <a href="https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.html">This blog</a> explains how to get from a method to a proc to a lambda. Great! Now we’re in business! 
+              </p>
+
+              <p>The next thing I’m going to do is look at my models for a validation that I can call either Model.order or Model.where on.  For more information on these two ActiveRecord queries go <a href="https://guides.rubyonrails.org/active_record_querying.html">here</a>.  Fortunately, I have a year table in my Car model that I can order either ascending or descending to get the oldest or the newest car in my database.</p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="car scope" class="pure-img-responsive" src="../images/car scope.png">
+                </div>
+              </div>              
+            </div>
+            <p>
+            Now how do I use this and chain it?  
+            </p>
+            <div class="post-images pure-g">
+              <div class="pure-u-1 pure-u-md-1-2">
+              <img alt="car scope" class="pure-img-responsive" src="../images/Chain.png">
+              </div>
+            </div>              
+            <p>
+              In the example above, I used the scope in one of my views.  I then used interpolation to call on Car.oldest_car in order to access the year, make, model, the path for the link_to, and another class for the owner name.  These are the results of my scope methods...
+            </p>
+            <div class="post-images pure-g">
+              <div class="pure-u-1 pure-u-md-1-2">
+              <img alt="car scope" class="pure-img-responsive" src="../images/owners index.png">
+              </div>
+            </div>              
+          </div>
+          </br> 
+        </br>
+        </br> 
+          <div class="pure-g" >
+            <div class="pure-u-1-3">
+              <button class="pure-button1" onclick="window.location.href='blog5.html';">Previous</button>
+              <button class="pure-button2" onclick="window.location.href='blog1.html';">Next</button>
+            </div>
+          </div>
+        </br> 
+      </br>
+      </br>    
+        </section>          
+        <div class="footer">
+          <a href="https://twitter.com/kim_ka96"><img src="../images/twitter.jpg"alt="Kimberly Kohel-Hayes's Twitter Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+          <a href="https://dev.to/kak79"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Kimberly Kohel-Hayes's DEV Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+          <a href='https://www.linkedin.com/in/kimberly-kohel-hayes-7b7413191/'><img src="../images/linkedin.jpg"alt="Kimberly Kohel-Hayes's LinkedIn Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+          <a href='https://stackoverflow.com/users/13615178/kim'><img src="../images/stack.jpg"alt="Kimberly Kohel-Hayes's Stack Overflow Profile" height="30" width="30"></a>&nbsp;&nbsp;&nbsp;
+          <a href='https://github.com/kak79?tab=repositories'><img src="../images/git.png"alt="Kimberly Kohel-Hayes's Git Hub Repositories" height="30" width="30"></a>
+          <p class="license">License <a href='https://opensource.org/licenses/MIT'>MIT</a> & &copy; Kimberly A Kohel-Hayes</p>
+        </div> 
+      </div> 
+    </div>
+    <script src="../js/ui.js"></script>
+  </body>
+</html>
