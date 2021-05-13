@@ -6,7 +6,7 @@
     <meta name="description" content="Kearney, NE, Web Design, Web Development, Blog, Computer Programming.">
     <title>Kearney, NE, Web Design, Web Development, Blog, Computer Programming.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href=../css/blog6.css>
+    <link rel="stylesheet" href=../css/blog8.css>
 </head>
   <body>
     <div id="layout"><a href="#menu" id="menuLink" class="menu-link"><span></span></a>
@@ -45,42 +45,77 @@
            <!-- A single blog post -->
           <section class="post">
             <header class="content-subhead">
-              <h1 class="post-title">Creating A Personal Website with the Pure Framework</h1>
-              <p class="post-meta"></p>
+              <div class="post-description">
+                <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <img alt="" class="pure-img-responsive" src="../images/">
+                        <div class="post-image-meta">
+                          <h3></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <h1 class="post-title">Dropdown with Dynamic Array as Objects</h1>
+            <p class="post-meta"></p>
             </header>
             <div class="post-content">
               <p>
-                Creating this website has been a road of trial and error for me.  The last time I was actively creating websites Java Script was in its infancy.  You only designed websites for laptops and desktops because that's all that they could be viewed on.  What I remember of HTML has changed quite a bit and CSS and JS are pretty new to me.  I researched grids, flexbox and frameworks exhaustively. I tried 3 different frameworks and my own grid before I settled on <a href="https://purecss.io/">Pure</a>.
+              I just made a single page JavaScript application using a Rails Api for the backend. One of the things that I had to do in the process making this application was to make a dropdown that utilized the array holding my recipes. the dropdown needed to update a the array did. Here is how I did it.
               </p>
                 
               <p>
-                Here is what the home page looked like originally:
+              First I made the html for the base part of the dropdown. 
               </p>
+              
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="html for dropdown" class="pure-img-responsive" src="../images/dropdownButton1.png">
+                </div>
+              </div> 
+
+              <p>
+              Then I made a static method in my Recipe class.
+              </p>
+
+              <p>
+              As usual I built the method in my console using a combination of debugger and console.log().
+              </p>
+
+              <p>
+              So first you put a debugger in the new method before you write anything. Refresh your index.html. Figure out how to access the <select></select> object. In this case, as you can see from the first image, I gave it an ID of id="dropdownButton1". So in the console I called document.getElementById("dropdownButton1") just to make sure it worked. It did so in my code I assigned it to the variable name sel.
+              </p>
+                
+              <p>
+              I add each line of code above the debugger so that the code is tested as I go and the debugger moves down a line so I can figure out the next line in the console where I can test multiple things out.
+              </p>
+                
+              <p>
+              I worked out the for loop in the console next. I needed to call the for loop on my array a variable number of times, so I used the .length method.
+              </p>
+               
+              <p>
+              I wanted each element of the array inside of an option tag so next I created an element called "option" and assigned it a variable.
+              </p>
+               
+              <p>
+              The following code is what I ended up with. The full code to my project is <a href="https://github.com/kak79/js_project_frontend">here</a>. Thank you for reading my post.
+              </p>
+              
 
               <div class="post-images pure-g">
                 <div class="pure-u-1 pure-u-md-1-2">
-                <a href="../images/home_page.png">
-                <img alt="Original Home Page" class="pure-img-responsive" src="../images/home_page.png">
-                </a>
+                <img alt="the finished dropdown" class="pure-img-responsive" src="../images/allRecipesDropdown.png">
                 </div>
               </div>              
-            </div>
-            <p>
-              I couldn't scroll down, the mobile looked terrible, but this one view was pretty good. If that was all I was looking for then I was fine, unfortunately, that was not the user experience that I was going for. So I gave up on writing my own grid.
-            </p>
-            <p>
-              Neither of the first two frameworks that I looked at gave me the flexibility that I was looking for, so I end up looking for small frameworks. That is how I found <a href="https://purecss.io/">Pure</a>.  It's small, lightweight and easy to use. With it I was eventually able to create a mobile friendly site that utilizes a small amount of Java Script.  I was able to combine two of their layouts to make my blog viewer friendly.  
-            </p>
-            <p>
-              I learned a lot of CSS in this journey.  I really like <a href="https://purecss.io/">Pure</a>, but I'd like to be able to design my own layout next time.
-            </p>
+         
+          
           </br> 
         </br>
         </br> 
           <div class="pure-g" >
             <div class="pure-u-1-3">
-              <button class="pure-button1" onclick="window.location.href='blog5.html';">Previous</button>
-              <button class="pure-button2" onclick="window.location.href='blog7.html';">Next</button>
+              <button class="pure-button1" onclick="window.location.href='blog7.html';">Previous</button>
+              <button class="pure-button2" onclick="window.location.href='blog1.html';">Next</button>
             </div>
           </div>
         </br> 
