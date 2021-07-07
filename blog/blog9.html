@@ -55,58 +55,103 @@
                     </div>
                 </div>
             </div>            
-            <h1 class="post-title">Dropdown with Dynamic Array as Objects</h1>
+            <h1 class="post-title">Creating a Single Page React Application with a Rails Back-End</h1>
             <p class="post-meta"></p>
             </header>
             <div class="post-content">
               <p>
-              I just made a single page JavaScript application using a Rails Api for the backend. One of the things that I had to do in the process making this application was to make a dropdown that utilized the array holding my recipes. the dropdown needed to update a the array did. Here is how I did it.
+                Start by making a directory with a descriptive name for your application or website.
               </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_1.png">
+                </div>
+              </div>               
                 
               <p>
-              First I made the html for the base part of the dropdown. 
+                You want to make this directory into a git repository next.  Go to your git repository page and click ‘new’. 
               </p>
               
               <div class="post-images pure-g">
                 <div class="pure-u-1 pure-u-md-1-2">
-                <img alt="html for dropdown" class="pure-img-responsive" src="../images/dropdownButton1.png">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_2.png">
                 </div>
               </div> 
 
               <p>
-              Then I made a static method in my Recipe class.
+                You don’t want to use a template.  The name should be the same as the name of your directory. If it is open source, make it public.  Click ‘Create Repository’.
               </p>
-
-              <p>
-              As usual I built the method in my console using a combination of debugger and console.log().
-              </p>
-
-              <p>
-              So first you put a debugger in the new method before you write anything. Refresh your index.html. Figure out how to access the <select></select> object. In this case, as you can see from the first image, I gave it an ID of id="dropdownButton1". So in the console I called document.getElementById("dropdownButton1") just to make sure it worked. It did so in my code I assigned it to the variable name sel.
-              </p>
-                
-              <p>
-              I add each line of code above the debugger so that the code is tested as I go and the debugger moves down a line so I can figure out the next line in the console where I can test multiple things out.
-              </p>
-                
-              <p>
-              I worked out the for loop in the console next. I needed to call the for loop on my array a variable number of times, so I used the .length method.
-              </p>
-               
-              <p>
-              I wanted each element of the array inside of an option tag so next I created an element called "option" and assigned it a variable.
-              </p>
-               
-              <p>
-              The following code is what I ended up with. The full code to my project is <a href="https://github.com/kak79/js_project_frontend">here</a>. Thank you for reading my post.
-              </p>
-              
 
               <div class="post-images pure-g">
                 <div class="pure-u-1 pure-u-md-1-2">
-                <img alt="the finished dropdown" class="pure-img-responsive" src="../images/allRecipesDropdown.png">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_3.png">
                 </div>
-              </div>              
+              </div>               
+
+              <p>
+                This is a new directory without a git repo in it yet, so you want to create a new repository on the command line.  Copy that code and go to your terminal.  Paste it on the command line in your terminal and hit enter.
+              </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_4.png">
+                </div>
+              </div>               
+
+              <p>
+                Type the following in your terminal to initialize your backend if you are using rails as an api. The ‘-T’ means no testing and the ‘—api’ changes it from a full rails application to an api.
+              </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_5.png">
+                </div>
+              </div> 
+                
+              <p>
+                Change directory into your backend.  Do a git add and commit and open your editor.  Open your gemfile and add cors and your serializer.
+              </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_6.png">
+                </div>
+              </div> 
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_7.png">
+                </div>
+              </div> 
+               
+              <p>
+                Go to config/initializers/cors.rb and uncomment lines 8 – 16.  Change origins type to ‘*’.  In your terminal do a git add and commit.  
+              </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_8.png">
+                </div>
+              </div> 
+               
+              <p>
+                Change directory up one to your application directory.  Type the following into your terminal to initialize your frontend.  You are now ready to start building your single page React application with a Rails api.
+              </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_9.png">
+                </div>
+              </div> 
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog9_10.png">
+                </div>
+              </div> 
+              
+
+              
          
           
           </br> 
@@ -114,8 +159,8 @@
         </br> 
           <div class="pure-g" >
             <div class="pure-u-1-3">
-              <button class="pure-button1" onclick="window.location.href='blog7.html';">Previous</button>
-              <button class="pure-button2" onclick="window.location.href='blog9.html';">Next</button>
+              <button class="pure-button1" onclick="window.location.href='blog8.html';">Previous</button>
+              <button class="pure-button2" onclick="window.location.href='blog1.html';">Next</button>
             </div>
           </div>
         </br> 
