@@ -157,13 +157,44 @@
                 </code>
               </p>
               
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog10-6.png">
+                  <div class="post-images-meta">
+                    <h5>thunk</h5>
+                  </div>
+                </div>
+              </div> 
+
               <p>
-                Due to the asynchronous nature of <strong>react</strong>, if your <strong>action</strong> is a function, then you need <strong>thunk</strong>.   If you follow the logic in the image below, first the <strong>componentDidMount()</strong> fires which you can see because of <strong>console.log('A')</strong>.  Then <strong>fetchBlogs()</strong> fires which you can see becase of <strong>console.log('B')</strong>.  Then <strong>console.log('C')</strong> fires before <strong>console.log('D')</strong> does.  This is because <strong>console.log('D')</strong> cannot fire until the 2nd <strong>promise</strong> is returned in the <strong>fetch</strong>.
+                Due to the asynchronous nature of <strong>react</strong>, if your <strong>action</strong> is a function, then you need <strong>thunk</strong>.   <strong>Thunk</strong> allows asynchronous functions to return a dispatch action in the form of a function (line 3 and 4 in above image).  Otherwise it returns an action object.
               </p>
 
               <p>
-                In order to <strong>connect</strong> our components to the <strong>store</strong>, we need to import <strong>connect</strong> and use <strong>mapStateToProps</strong> and <strong>mapDispatchToProps</strong>.
+                If you follow the logic in the image below, first the <strong>componentDidMount()</strong> fires which you can see because of <strong>console.log('A')</strong>.  Then <strong>fetchBlogs()</strong> fires which you can see becase of <strong>console.log('B')</strong>.  Then <strong>console.log('C')</strong> fires before <strong>console.log('D')</strong> does.  This is because <strong>console.log('D')</strong> cannot fire until the 2nd <strong>promise</strong> is returned in the <strong>fetch</strong>.
               </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog10-7.png">
+                  <div class="post-images-meta">
+                    <h5>asynchronous nature of action/fetchBlogs.js</h5>
+                  </div>
+                </div>
+              </div> 
+
+                In order to <strong>connect</strong> our components to the <strong>store</strong>, we need to import <strong>connect</strong> and use <strong>mapStateToProps</strong> and <strong>mapDispatchToProps</strong>.  <strong>Deconstruction</strong> means taking a piece of code and splitting it into the smallest possible piece.
+                  <p>
+              </p>
+
+              <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                <img alt="" class="pure-img-responsive" src="../images/blog10-8.png">
+                  <div class="post-images-meta">
+                    <h5>mapStateToProps and mapDispatchToProps deconstructed</h5>
+                  </div>
+                </div>
+              </div> 
 
               
 
